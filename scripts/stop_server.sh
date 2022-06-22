@@ -1,2 +1,2 @@
 #!/bin/bash
-service nginx stop
+systemctl start nginx.service
