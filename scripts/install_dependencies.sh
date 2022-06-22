@@ -1,7 +1,6 @@
 #!/bin/bash
-echo "$DEPLOYMENT_GROUP_NAME"  >>  example.txt
+if ! [ -x "$(command -v httpd)" ]; 
+then yum install -y httpd24 >&2;   
+	exit 1; 
+fi # install apache if not already installed
 
-if [ "$DEPLOYMENT_GROUP_NAME" == "Staging" ]
-then
-    #do something
-fi
